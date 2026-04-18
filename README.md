@@ -2,7 +2,7 @@
 
 This project explores real-time sonification of chess as an interactive and embodied audiovisual system.
 
-A custom Python interface (based on `python-chess` and Pygame) captures game state and events, which are transmitted via Open Sound Control (OSC) to a Max/MSP patch. The Max environment maps these events to a sample-based sound engine, generating both discrete sonic events (moves, captures, checks) and continuous sound layers reflecting the evolving board state.
+A custom Python interface (based on `python-chess` and `pygame`) captures game state and events, which are transmitted via Open Sound Control (OSC) to a Max/MSP patch. The Max environment maps these events to a sample-based sound engine, generating both discrete sonic events (moves, captures, checks) and continuous sound layers reflecting the evolving board state.
 
 The system is designed as a modular pipeline:
 
