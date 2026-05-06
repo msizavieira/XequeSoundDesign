@@ -1,0 +1,5 @@
+pygame
+chess
+python-osc
+networkx
+pyinstaller
