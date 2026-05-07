@@ -25,6 +25,7 @@ class ChessInterface:
         self.move_history_san = []
         self.redo_san_stack = []
         self.font = pygame.font.SysFont("Arial", 24)
+        self.coord_font = pygame.font.SysFont("Arial", 18)
 
         self.piece_images = load_piece_images(PIECE_DIR, SQ_SIZE)
 
@@ -61,6 +62,32 @@ class ChessInterface:
 
                 if self.selected_square == square:
                     pygame.draw.rect(self.screen, HIGHLIGHT, rect, 5)
+
+        # Draw ranks (1-8)
+        for rank in range(8):
+            label = str(8 - rank)
+
+            square_color = WHITE if (rank + 0) % 2 == 0 else BLACK
+            text_color = BLACK if square_color == WHITE else WHITE
+
+            text = self.coord_font.render(label, True, text_color)
+            self.screen.blit(
+                text,
+                (5, rank * SQ_SIZE + 5)
+            )
+
+        # Draw files (a-h)
+        for file in range(8):
+            label = chr(ord('a') + file)
+
+            square_color = WHITE if (7 + file) % 2 == 0 else BLACK
+            text_color = BLACK if square_color == WHITE else WHITE
+
+            text = self.coord_font.render(label, True, text_color)
+            self.screen.blit(
+                text,
+                (file * SQ_SIZE + SQ_SIZE - 20, HEIGHT - 20)
+            )
 
     def draw_pieces(self):
         for square in chess.SQUARES:

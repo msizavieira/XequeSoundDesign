@@ -29,7 +29,15 @@ def resource_path(relative_path: str) -> str:
 
 
 PIECE_DIR = resource_path("Pieces")
-STOCKFISH_PATH = resource_path(os.path.join("stockfish", "stockfish.exe"))
+
+if sys.platform.startswith("win"):
+    STOCKFISH_PATH = resource_path(
+        os.path.join("stockfish", "stockfish.exe")
+    )
+else:
+    STOCKFISH_PATH = resource_path(
+        os.path.join("stockfish", "stockfish")
+    )
 
 def piece_to_int(piece: chess.Piece | None) -> int:
     if piece is None:
