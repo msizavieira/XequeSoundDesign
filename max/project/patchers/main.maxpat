@@ -9,8 +9,38 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 34.0, 77.0, 1852.0, 921.0 ],
+        "rect": [ 134.0, 134.0, 1852.0, 921.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-3",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 843.0, 522.0, 67.0, 22.0 ],
+                    "saved_object_attributes": {
+                        "allwindowsactive": 0,
+                        "appicon_mac": "C:/Users/msvieira/Downloads/xeque.icns",
+                        "appicon_win": "C:/Users/msvieira/Downloads/xeque.ico",
+                        "audiosupport": 1,
+                        "bundleidentifier": "com.mycompany.myprogram",
+                        "cantclosetoplevelpatchers": 0,
+                        "cefsupport": 1,
+                        "copysupport": 1,
+                        "database": 1,
+                        "extensions": 1,
+                        "gensupport": 1,
+                        "midisupport": 1,
+                        "noloadbangdefeating": 0,
+                        "overdrive": 0,
+                        "preffilename": "",
+                        "searchformissingfiles": 1,
+                        "statusvisible": 1,
+                        "usesearchpath": 0
+                    },
+                    "text": "standalone"
+                }
+            },
             {
                 "box": {
                     "id": "obj-4",
@@ -109,6 +139,7 @@
                         },
                         "classnamespace": "box",
                         "rect": [ 84.0, 132.0, 632.0, 481.0 ],
+                        "visible": 1,
                         "boxes": [
                             {
                                 "box": {
@@ -147,11 +178,11 @@
                                 "box": {
                                     "id": "obj-2",
                                     "maxclass": "newobj",
-                                    "numinlets": 0,
+                                    "numinlets": 1,
                                     "numoutlets": 1,
-                                    "outlettype": [ "" ],
-                                    "patching_rect": [ 109.0, 56.0, 89.0, 22.0 ],
-                                    "text": "r move_stream"
+                                    "outlettype": [ "bang" ],
+                                    "patching_rect": [ 76.0, 34.0, 58.0, 22.0 ],
+                                    "text": "loadbang"
                                 }
                             },
                             {
@@ -903,7 +934,7 @@
                                     "numoutlets": 2,
                                     "outlettype": [ "signal", "float" ],
                                     "patching_rect": [ 296.0, 229.0, 56.0, 22.0 ],
-                                    "sig": 1.0
+                                    "sig": 0.960265701264143
                                 }
                             },
                             {
@@ -1032,7 +1063,7 @@
                                     "numoutlets": 2,
                                     "outlettype": [ "signal", "float" ],
                                     "patching_rect": [ 296.0, 133.0, 56.0, 22.0 ],
-                                    "sig": 0.0
+                                    "sig": 0.05676328390836716
                                 }
                             },
                             {
@@ -2429,7 +2460,7 @@
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
                                     "patching_rect": [ 103.0, 351.0, 29.5, 22.0 ],
-                                    "text": "13"
+                                    "text": "5"
                                 }
                             },
                             {
@@ -3994,17 +4025,6 @@
                 }
             }
         ],
-        "parameters": {
-            "parameterbanks": {
-                "0": {
-                    "index": 0,
-                    "name": "",
-                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
-                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-                }
-            },
-            "inherited_shortname": 1
-        },
         "autosave": 0
     }
 }

@@ -1,6 +1,6 @@
 import chess
 import chess.engine
-import frag
+import fragility
 from config import STOCKFISH_PATH, ENGINE_TIME_LIMIT
 
 
@@ -22,7 +22,7 @@ class BoardAnalyzer:
         return 0.0 if cp is None else cp / 100.0
 
     def get_fragility(self, board: chess.Board) -> float:
-        return frag.compute_fragility(board)
+        return fragility.compute_fragility(board)
 
     def close(self) -> None:
         self.engine.quit()
