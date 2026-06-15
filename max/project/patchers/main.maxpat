@@ -995,7 +995,7 @@
                                     "numoutlets": 2,
                                     "outlettype": [ "signal", "float" ],
                                     "patching_rect": [ 296.0, 229.0, 56.0, 22.0 ],
-                                    "sig": 1.0
+                                    "sig": 0.30000000000000004
                                 }
                             },
                             {
@@ -1124,7 +1124,7 @@
                                     "numoutlets": 2,
                                     "outlettype": [ "signal", "float" ],
                                     "patching_rect": [ 295.0, 136.0, 56.0, 22.0 ],
-                                    "sig": 0.0
+                                    "sig": 1.0
                                 }
                             },
                             {
@@ -2390,7 +2390,6 @@
                         },
                         "classnamespace": "box",
                         "rect": [ 134.0, 134.0, 798.0, 648.0 ],
-                        "visible": 1,
                         "boxes": [
                             {
                                 "box": {

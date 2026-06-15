@@ -50,7 +50,6 @@ class PGNReplayApp(ChessInterface):
             print(f"Illegal PGN move at index {self.move_index}: {move}")
             return
 
-        # This sends OSC because it uses your existing handle_move()
         self.handle_move(move)
 
         self.move_index += 1

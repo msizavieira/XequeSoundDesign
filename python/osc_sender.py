@@ -47,30 +47,13 @@ class OscSender:
         print([1, color])
 
 
-    def send_next_move_perf(self, idx) -> None:
-        """
-        For performance purposes. In PGN Replay, sends OSC message about the next move that is going to be played
-        """
+    # Was first thought to be handled by Max, ended up being handled directly in python
+    # def send_next_move_perf(self, idx) -> None:
+    #     """
+    #     For performance purposes. In PGN Replay, sends OSC message about the next move that is going to be played
+    #     """
 
-        self.client.send_message("/next_move", idx)
+    #     self.client.send_message("/next_move", idx)
 
     def send_move_time(self, ms: int) -> None:
         self.client.send_message("/move_time", ms)
-
-    def send_piece_state(self, board: chess.Board) -> None:
-        for square in chess.SQUARES:
-            piece = board.piece_at(square)
-            if piece is None:
-                continue
-
-            x = chess.square_file(square)
-            y = chess.square_rank(square)
-            pitch = 48 + y * 2
-            color = 1 if piece.color == chess.WHITE else 0
-
-            self.client.send_message(
-                "/piece",
-                [piece_to_int(piece), x, y, pitch, color]
-            )
-
-        self.client.send_message("/update_done", 1)
