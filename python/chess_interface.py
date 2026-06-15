@@ -109,6 +109,8 @@ class ChessInterface:
                 "draw": "Draw",
                 "white_resign": "White resigns",
                 "black_resign": "Black resigns",
+                "back": "Back",
+                "forward": "Forward",
             }[name]
 
             text = self.font.render(label, True, BLACK)

@@ -47,6 +47,13 @@ class OscSender:
         print([1, color])
 
 
+    def send_next_move_perf(self, idx) -> None:
+        """
+        For performance purposes. In PGN Replay, sends OSC message about the next move that is going to be played
+        """
+
+        self.client.send_message("/next_move", idx)
+
     def send_move_time(self, ms: int) -> None:
         self.client.send_message("/move_time", ms)
 
